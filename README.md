@@ -1,5 +1,5 @@
 
-![Install Helm]
+<h2>Install Helm</h2>
 
 https://www.digitalocean.com/community/tutorials/how-to-install-software-on-kubernetes-clusters-with-the-helm-package-manager - 2.X
 
