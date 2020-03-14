@@ -50,6 +50,7 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nginx-ingress-
 <h2>Create the cert-manager Custom Resource Definitions (CRDs). Create these by applying them directly from the cert-manager GitHub repository :</h2>
 
 <h4>CHECK FOR UPGRADES<h4>
+  
 https://cert-manager.io/docs/installation/upgrading/
 
 `kubectl apply -f https://raw.githubusercontent.com/jetstack/cert-manager/release-0.13/deploy/manifests/00-crds.yaml`
