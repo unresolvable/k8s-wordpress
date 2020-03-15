@@ -1,6 +1,6 @@
 ![alt text][logo]
 
-[logo]: https://render.bitstrips.com/v2/cpanel/2f035389-9fb0-4713-99ae-2197e2658b00-040b2115-5ca8-447a-a6d2-5bb598966491-v1.png?transparent=1&palette=1 "Logo"
+[logo]: https://render.bitstrips.com/v2/cpanel/2f035389-9fb0-4713-99ae-2197e2658b00-040b2115-5ca8-447a-a6d2-5bb598966491-v1.png?transparent=1&palette=1 "Coronavirus!"
 
 <h2>Install Helm</h2>
 
