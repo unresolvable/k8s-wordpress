@@ -41,20 +41,18 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nginx-ingress-
 
 <h2>Create these mandatory resources:</h2>
 
-`kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.24.1/deploy/mandatory.yaml`
+https://kubernetes.github.io/ingress-nginx/deploy/#prerequisite-generic-deployment-command
+
+`kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/mandatory.yaml`
 
 
 <h2>Create the LoadBalancer Service:</h2>
 
-`kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.24.1/deploy/provider/cloud-generic.yaml`
+`kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/provider/cloud-generic.yaml`
 
 
 
 <h2>Create the cert-manager Custom Resource Definitions (CRDs). Create these by applying them directly from the cert-manager GitHub repository :</h2>
-
-<h4>CHECK FOR UPGRADES</h4>
-  
-https://cert-manager.io/docs/installation/upgrading/
 
 `kubectl apply -f https://raw.githubusercontent.com/jetstack/cert-manager/release-0.13/deploy/manifests/00-crds.yaml`
 
@@ -73,8 +71,15 @@ v2
 
 v3
 `helm install cert-manager --namespace kube-system jetstack/cert-manager --version v0.13.0`
-`helm upgrade cert-manager --namespace kube-system jetstack/cert-manager --version v0.13.1`
 
+
+<h4>CHECK FOR UPGRADES</h4>
+  
+https://cert-manager.io/docs/installation/upgrading/
+
+`kubectl delete -n kube-system deployment cert-manager cert-manager-cainjector cert-manager-webhook`
+
+`helm upgrade cert-manager --namespace kube-system jetstack/cert-manager --version v0.14.0`
 
 
 <h2>Create Prod Certificate Issuer</h2>
