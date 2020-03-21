@@ -54,7 +54,7 @@ https://kubernetes.github.io/ingress-nginx/deploy/#prerequisite-generic-deployme
 
 <h2>Create the cert-manager Custom Resource Definitions (CRDs). Create these by applying them directly from the cert-manager GitHub repository :</h2>
 
-`kubectl apply -f https://raw.githubusercontent.com/jetstack/cert-manager/release-0.13/deploy/manifests/00-crds.yaml`
+`kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.14.0/cert-manager.crds.yaml`
 
 <h2>Next, we’ll add a label to the kube-system namespace, where we’ll install cert-manager, to enable advanced resource validation using a webhook:</h2>
 
